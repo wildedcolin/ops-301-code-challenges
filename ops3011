@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# Define the source file and get the current date and time
+source_file="/var/log/syslog"
+current_date=$(date +'%Y-%m-%d')
+current_time=$(date +'%H-%M-%S')
+
+# Create the destination filename with the current date and time
+destination_file="syslog_${current_date}_${current_time}.log"
+
+# Copy the source file to the destination
+cp "$source_file" "$destination_file"
+
+# Print a success message
+echo "Syslog copied to $destination_file"
