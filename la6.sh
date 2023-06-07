@@ -1,8 +1,8 @@
 import os
 
-# Declare and initialize variables
 
-# you can use os. system to execute the Bash command
+
+# You can use os.system to execute the command
 os.system("ls")
 
 # Assigned Variables
