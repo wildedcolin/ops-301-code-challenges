@@ -1,0 +1,18 @@
+# Set the variables for the user attributes
+$FirstName = "Franz"
+$LastName = "Ferdinand"
+$DisplayName = "$FirstName $LastName"
+$Title = "TPS Reporting Lead"
+$Company = "GlobeX USA"
+$Office = "Springfield, OR"
+$Department = "TPS Department"
+$EmailAddress = "ferdi@GlobeXpower.com"
+$Username = $FirstName.ToLower() + $LastName.ToLower()
+
+# Create the user in Active Directory
+New-ADUser -SamAccountName $Username -GivenName $FirstName -Surname $LastName -DisplayName $DisplayName `
+    -Title $Title -Company $Company -Office $Office -Department $Department -EmailAddress $EmailAddress `
+    -Enabled $true -PassThru
+
+# Display the user details
+Get-ADUser -Filter "SamAccountName -eq '$Username'" -Properties *
