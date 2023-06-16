@@ -37,3 +37,19 @@ if a >= b:
     print("a is greater than or equal to b")
 else:
     print("a is less than b")
+
+# Example with elif and else
+if a > b:
+    print("a is greater than b")
+elif a < b:
+    print("a is less than b")
+else:
+    print("a is equal to b")
+
+# Example with if, elif, and else
+if a > b:
+    print("a is greater than b")
+elif a < b:
+    print("a is less than b")
+else:
+    print("a is equal to b")
